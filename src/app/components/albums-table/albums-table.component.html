@@ -1,0 +1,14 @@
+<h1>Lista de albunes  </h1>
+<table id="albums">
+  <tr>
+    <th *ngFor="let col of columns">
+      {{col}}
+    </th>
+  </tr>
+  <tr *ngFor="let albums of albums">
+    <td *ngFor="let col of index">
+      {{albums[col]}}
+    </td>
+  </tr>
+
+</table>

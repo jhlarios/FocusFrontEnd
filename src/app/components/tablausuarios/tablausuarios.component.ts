@@ -11,9 +11,7 @@ export class TablausuariosComponent implements OnInit {
 
   constructor(private rs : RestService){}
   columns = ["Id", "Name", "User name", "Email", "Address"];
-
   index = ["id", "name", "username", "email", "address"];
-
   users : Users[] = [];
   
   ngOnInit(): void {
@@ -23,7 +21,6 @@ export class TablausuariosComponent implements OnInit {
       {
         this.users = response;
       },
-
       (error)=>
       {
         console.log("Error Occured : "+error);
