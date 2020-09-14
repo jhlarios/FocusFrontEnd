@@ -11,7 +11,7 @@ export class RestService {
 
   constructor(private http : HttpClient) { }
 
-  urlUser   : string  = "https://localhost:44368/FocusTest/Principal/UserGrid/";
+  urlUser   : string  = "https://localhost:44368/FocusTest/Principal/UserGrid";
   urlAlbums : string  = "https://localhost:44368/FocusTest/Principal/albums/";
   urlPhotos : string  = "https://localhost:44368/FocusTest/Principal/photos/";
 

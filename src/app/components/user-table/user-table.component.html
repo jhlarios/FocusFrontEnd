@@ -1,4 +1,18 @@
 <h1>Lista de usuarios  </h1>
+<form  [formGroup]="FilterForm2" (ngSubmit)="ngOnInit()">
+  <input formControlName="city" placeholder="City"> 
+  <button mat-raised-button type="submit" color="primary">Buscar por ciudad</button>
+</form>
+<br>
+<form  [formGroup]="FilterForm1" (ngSubmit)="ngOnInit()">
+  <input formControlName="name" placeholder="Name">
+  <input formControlName="username" placeholder="User name">
+  <input formControlName="email" placeholder="email">
+  <button mat-raised-button type="submit" color="primary">Buscar por usuario</button>
+</form>
+
+
+
 <table id="users">
   <tr>
     <th *ngFor="let col of columns">

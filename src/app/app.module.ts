@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserTableComponent } from './components/user-table/user-table.component';
 import { AlbumsTableComponent } from './components/albums-table/albums-table.component';
 import { PhotosTableComponent } from './components/photos/photos.component';
+import { FormsModule } from '@angular/forms' 
+import { ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PhotosTableComponent } from './components/photos/photos.component';
     BrowserModule,
     AppRoutingModule,
     BrowserModule,
-     HttpClientModule
+     HttpClientModule,
+     ReactiveFormsModule,  
+   FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
