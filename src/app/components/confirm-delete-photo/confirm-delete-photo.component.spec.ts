@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConfirmDeletePhotoComponent } from './confirm-delete-photo.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 describe('ConfirmDeletePhotoComponent', () => {
   let component: ConfirmDeletePhotoComponent;
@@ -8,6 +11,11 @@ describe('ConfirmDeletePhotoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        MatCardModule
+        ,ReactiveFormsModule
+        ,FormsModule
+      ],
       declarations: [ ConfirmDeletePhotoComponent ]
     })
     .compileComponents();

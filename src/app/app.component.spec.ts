@@ -3,6 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,6 +13,7 @@ describe('AppComponent', () => {
         RouterTestingModule
         ,ReactiveFormsModule
         ,FormsModule
+        ,MatCardModule
       ],
       declarations: [
         AppComponent

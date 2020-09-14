@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { RestService } from '../../../Services/rest.service';
 import { FormBuilder, FormGroup,FormControl, FormArray, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { Photo } from '../../../Models/Photo';
+import { ResultadoModel } from '../../../Models/ResultadoModel';
+import { MatCardModule } from '@angular/material/card';
+
+
 
 @Component({
   selector: 'app-confirm-delete-photo',
@@ -13,9 +16,7 @@ export class ConfirmDeletePhotoComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,private rs : RestService,private formBuilder:FormBuilder) { }
   id:string; 
-  columns = [ "Title"];
-  index = ["title"];
-  photos : Photo[] = [];
+ Resultado:ResultadoModel;
   Delete():void
   {
       this.route.paramMap.subscribe(params => {
@@ -24,12 +25,13 @@ export class ConfirmDeletePhotoComponent implements OnInit {
    (
      (response)=>
      {
-       this.photos = response;
-       
+       this.Resultado = response;
+       console.log(response);
      },
      (error)=>
      {
        console.log("Error Occured : "+error);
+      //  this.Resultado = new ResultadoModel{this.Resultado};
      }
    )
      

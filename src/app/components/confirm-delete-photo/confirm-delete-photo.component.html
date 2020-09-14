@@ -1,26 +1,13 @@
+<!-- <mat-card class="mat-card mat-focus-indicator">
+    *Debido a que la base solicitado json para esta prueba no es persistente para las transacciones solo se muestra la respuesta que provee el servicio
+</mat-card> -->
+<br/>
+
 <h1>Confirmar Borrado  </h1>
-<form  [formGroup]="ConfirmForm" (ngSubmit)="Delete()">
+<form   (ngSubmit)="Delete()">
 <button mat-raised-button type="submit" color="primary">Borrar</button>
 </form>
 
-<br>
-<h1>Fotos borradas </h1>
-<table id="photos">
-  <tr>
-      <th></th>
-    <th *ngFor="let col of columns">
-      {{col}}
-    </th>
-  </tr>
-  <tr *ngFor="let photos of photos">
-      <td>
-          <a href="{{photos.thumbnailUrl}}" target="_blank" >
-          <img height="40" src="{{photos.thumbnailUrl}}"/>
-        </a>
-      </td>
-    <td *ngFor="let col of index">
-      {{photos[col]}}
-    </td>
-  </tr>
+<br/>
+<h1 ng-model="Resultado"></h1>
 
-</table>

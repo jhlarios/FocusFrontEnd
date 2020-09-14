@@ -9,7 +9,8 @@ import { AlbumsTableComponent } from './components/albums-table/albums-table.com
 import { PhotosTableComponent } from './components/photos/photos.component';
 import { FormsModule } from '@angular/forms' 
 import { ReactiveFormsModule} from '@angular/forms';
-import { ConfirmDeletePhotoComponent } from './components/confirm-delete-photo/confirm-delete-photo.component'
+import { ConfirmDeletePhotoComponent } from './components/confirm-delete-photo/confirm-delete-photo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ConfirmDeletePhotoComponent } from './components/confirm-delete-photo/c
     BrowserModule,
      HttpClientModule,
      ReactiveFormsModule,  
-   FormsModule
+   FormsModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

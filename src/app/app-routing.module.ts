@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlbumsTableComponent } from './components/albums-table/albums-table.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
 import { PhotosTableComponent } from './components/photos/photos.component';
+import { ConfirmDeletePhotoComponent } from './components/confirm-delete-photo/confirm-delete-photo.component';
 const routes: Routes = [
   {
     path: '',
@@ -17,6 +18,15 @@ const routes: Routes = [
     path: 'Photos/:id',
     component: PhotosTableComponent
 }
+
+,
+  {
+    path: 'PhotosDelete/:id',
+    component: ConfirmDeletePhotoComponent
+}
+
+
+
 ];
 
 @NgModule({

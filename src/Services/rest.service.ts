@@ -3,6 +3,7 @@ import { HttpClient,HttpParams } from '@angular/common/http';
 import { Users } from '../Models/Users';
 import { Album } from '../Models/Album';
 import { Photo } from '../Models/Photo';
+import { ResultadoModel } from '../Models/ResultadoModel';
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +38,7 @@ export class RestService {
 
   deletePhotos(id:string)
   {
-    return this.http.delete<Photo[]>(this.urlPhotos+ "?id="+ id);
+    return this.http.delete<ResultadoModel>(this.urlPhotos+ "?id="+ id);
   }
 
   postPhotos(id:string, photo:Photo)
