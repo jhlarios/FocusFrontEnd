@@ -20,7 +20,6 @@ export class PhotosTableComponent implements OnInit {
   ngOnInit(): void {
    this.route.paramMap.subscribe(params => {
        this.id = params.get('id');
-     console.log (this.id);
        this.rs.getPhotos(this.id).subscribe
     (
       (response)=>

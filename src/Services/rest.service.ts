@@ -35,6 +35,11 @@ export class RestService {
     return this.http.put<Album>(this.urlAlbums+ "?id="+ id, album);
   }
 
+  deletePhotos(id:string)
+  {
+    return this.http.delete<Photo[]>(this.urlPhotos+ "?id="+ id);
+  }
+
   postPhotos(id:string, photo:Photo)
   {
     return this.http.post<Photo>(this.urlPhotos, photo);

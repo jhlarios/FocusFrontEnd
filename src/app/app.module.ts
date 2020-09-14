@@ -8,14 +8,16 @@ import { UserTableComponent } from './components/user-table/user-table.component
 import { AlbumsTableComponent } from './components/albums-table/albums-table.component';
 import { PhotosTableComponent } from './components/photos/photos.component';
 import { FormsModule } from '@angular/forms' 
-import { ReactiveFormsModule} from '@angular/forms'
+import { ReactiveFormsModule} from '@angular/forms';
+import { ConfirmDeletePhotoComponent } from './components/confirm-delete-photo/confirm-delete-photo.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UserTableComponent,
     AlbumsTableComponent,
-    PhotosTableComponent
+    PhotosTableComponent,
+    ConfirmDeletePhotoComponent
   ],
   imports: [
     BrowserModule,
