@@ -3,11 +3,11 @@ import { RestService } from '../../../Services/rest.service';
 import { Users } from '../../../Models/Users';
 
 @Component({
-  selector: 'app-tablausuarios',
-  templateUrl: './tablausuarios.component.html',
-  styleUrls: ['./tablausuarios.component.css']
+  selector: 'user-table',
+  templateUrl: './user-table.component.html',
+  styleUrls: ['./user-table.component.css']
 })
-export class TablausuariosComponent implements OnInit {
+export class UserTableComponent implements OnInit {
 
   constructor(private rs : RestService){}
   columns = ["Id", "Name", "User name", "Email", "Address"];

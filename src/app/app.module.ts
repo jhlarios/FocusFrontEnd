@@ -4,16 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TablausuariosComponent } from './components/tablausuarios/tablausuarios.component';
+import { UserTableComponent } from './components/user-table/user-table.component';
 import { AlbumsTableComponent } from './components/albums-table/albums-table.component';
-import { PhotosComponent } from './components/photos/photos.component';
+import { PhotosTableComponent } from './components/photos/photos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TablausuariosComponent,
+    UserTableComponent,
     AlbumsTableComponent,
-    PhotosComponent
+    PhotosTableComponent
   ],
   imports: [
     BrowserModule,

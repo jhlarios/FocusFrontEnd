@@ -1,1 +1,23 @@
-<p>photos works!</p>
+<a *ngFor="let photos of photos.slice(0, 1)"  href="Album/{{photos.albumId}}"> << Regresar a album </a>
+<br>
+
+<h1>Lista de fotos </h1>
+<table id="photos">
+  <tr>
+      <th></th>
+    <th *ngFor="let col of columns">
+      {{col}}
+    </th>
+  </tr>
+  <tr *ngFor="let photos of photos">
+      <td>
+          <a href="{{photos.thumbnailUrl}}" target="_blank" >
+          <img height="40" src="{{photos.thumbnailUrl}}"/>
+        </a>
+      </td>
+    <td *ngFor="let col of index">
+      {{photos[col]}}
+    </td>
+  </tr>
+
+</table>

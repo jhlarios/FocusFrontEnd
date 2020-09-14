@@ -5,10 +5,7 @@ export class Photo
     title : string;
     url : string;
     thumbnailUrl : string;
-
-   
-   
-
+    
     constructor(albumId,id, title, url,thumbnailUrl )
     {
         this.albumId = albumId;

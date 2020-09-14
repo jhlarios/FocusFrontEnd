@@ -1,14 +1,19 @@
-<h1>Lista de albunes  </h1>
+<a href=""> << Regresar a usuarios</a>
+<br>
+
+<h1>Lista de álbumes  </h1>
 <table id="albums">
   <tr>
     <th *ngFor="let col of columns">
       {{col}}
     </th>
+    <th></th>
   </tr>
   <tr *ngFor="let albums of albums">
     <td *ngFor="let col of index">
       {{albums[col]}}
     </td>
+    <td><a href="Photos/{{albums.id}}"  >Photos</a></td>
   </tr>
 
 </table>
