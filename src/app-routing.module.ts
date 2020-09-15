@@ -35,7 +35,7 @@ const routes: Routes = [
 
 ,
   {
-    path: 'AlbumUpdate',
+    path: 'AlbumUpdate/:id',
     component: AlbumUpdateComponent
 }
 

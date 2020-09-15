@@ -13,8 +13,10 @@ export class RestService {
   constructor(private http : HttpClient) { }
 
   urlUser   : string  = "https://localhost:44368/FocusTest/Principal/UserGrid";
-  urlAlbums : string  = "https://localhost:44368/FocusTest/Principal/albums/";
+  urlAlbums : string  = "https://localhost:44368/FocusTest/Principal/albums";
   urlPhotos : string  = "https://localhost:44368/FocusTest/Principal/photos/";
+  urlAlbumDetail : string  = "https://localhost:44368/FocusTest/Principal/AlbumDetail";
+  
 
   getUsers(name:string , username:string , email:string , city:string )
   {
@@ -31,9 +33,14 @@ export class RestService {
     return this.http.get<Photo[]>(this.urlPhotos + "?id="+ id);
   }
 
-  putAlbums(id:string, album:Album)
+  getAlbumDetail(id:string)
   {
-    return this.http.put<Album>(this.urlAlbums+ "?id="+ id, album);
+    return this.http.get<Album>(this.urlAlbumDetail + "?id="+ id);
+  }
+
+  putAlbum(album:Album)
+  {
+    return this.http.put<Album>(this.urlAlbums, album);
   }
 
   deletePhotos(id:string)

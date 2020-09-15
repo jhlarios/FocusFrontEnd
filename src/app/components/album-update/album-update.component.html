@@ -1,1 +1,31 @@
-<p>album-update works!</p>
+<a  href="Album/{{AlbumCurrent.userId}}"> << Regresar a albumes </a>
+<br>
+
+<h1 style="text-align: center;">Actualizar titulo de album </h1>
+<br>
+<mat-card>*Debido a que la base solicitada en json para esta prueba no es persistente para las transacciones solo se muestra la respuesta que provee el servicio al actualizar un album</mat-card>
+<br>
+
+<form  style="text-align: center;"  [formGroup]="UpdateAlbumForm"  (ngSubmit)="ngUpdate()">
+
+    <mat-form-field  class="">
+      <mat-label style="color: #c2185b;">Titulo</mat-label>   
+      <input [(ngModel)]="AlbumCurrent.title"   style="border-bottom: 2px solid #c2185b;" matInput placeholder="Titulo"  formControlName="title" >    
+     
+    </mat-form-field>
+    <br>
+    
+    <button style="margin-left: 10px;" mat-raised-button type="submit" color="primary">Actualizar album</button>  
+  </form>
+
+<br>
+<h1 >Respuesta del servidor: </h1>
+<table class="center" mat-table ng-model="AlbumUpdated">
+<th>Id</th>
+<td>{{AlbumUpdated.id}}</td>
+<th>UserId</th>
+<td>{{AlbumUpdated.userId}}</td>
+<th>Title</th>
+<td>{{AlbumUpdated.title}}</td>
+
+</table>

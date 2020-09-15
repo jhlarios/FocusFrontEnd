@@ -4,16 +4,18 @@
 <h1>Lista de álbumes  </h1>
 <table mat-table class="mat-elevation-z8"  id="albums">
   <tr>
+    <th></th>
     <th *ngFor="let col of columns">
       {{col}}
     </th>
     <th></th>
   </tr>
   <tr *ngFor="let albums of albums">
+    <td><a href="AlbumUpdate/{{albums.id}}"  ><mat-icon aria-hidden="false" aria-label="icon" style="color: #c2185b;">edit</mat-icon>Editar</a></td>
     <td *ngFor="let col of index">
       {{albums[col]}}
     </td>
-    <td><a href="Photos/{{albums.id}}"  ><mat-icon aria-hidden="false" aria-label="Example home icon" style="color: #c2185b;">insert_photo</mat-icon>Photos</a></td>
+    <td><a href="Photos/{{albums.id}}"  ><mat-icon aria-hidden="false" aria-label="Example home icon" style="color: #c2185b;">insert_photo</mat-icon>Fotos</a></td>
   </tr>
 
 </table>
