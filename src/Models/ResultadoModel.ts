@@ -1,12 +1,12 @@
 export class ResultadoModel
 {
       
-    Resultado : string;
+    resultado : string;
     
     
-    constructor(Resultado )
+    constructor(resultado )
     {
-        this.Resultado = Resultado;
+        this.resultado = resultado;
         
     }
 

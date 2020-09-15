@@ -2,11 +2,10 @@
 <br>
 
 <br>
-<a *ngFor="let photos of photos.slice(0, 1)"  href="PhotoRegister/{{photos.albumId}}"> <mat-icon aria-hidden="false" aria-label="Example icon" style="color: #c2185b;">note_add</mat-icon> Register Photo </a>
+<a   href="PhotoRegister"> <mat-icon aria-hidden="false" aria-label="Example icon" style="color: #c2185b;">note_add</mat-icon> Register Photo </a>
 <br>
-<h1 style="text-align: center;">Lista de fotos </h1>
-<div style="text-align: center;">
-<table  mat-table class="mat-elevation-z8"  id="photos">
+<h1>Lista de fotos </h1>
+<table mat-table class="mat-elevation-z8"  id="photos">
   <tr>
       <th></th>
     <th *ngFor="let col of columns">
@@ -26,4 +25,3 @@
   </tr>
 
 </table>
-</div>

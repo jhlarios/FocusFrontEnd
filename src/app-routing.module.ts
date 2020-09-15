@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlbumsTableComponent } from './components/albums-table/albums-table.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
 import { PhotosTableComponent } from './components/photos/photos.component';
-import { ConfirmDeletePhotoComponent } from './components/confirm-delete-photo/confirm-delete-photo.component';
 import { PhotoregisterComponent } from './components/photoregister/photoregister.component';
 import { AlbumUpdateComponent } from './components/album-update/album-update.component';
+import { ConfirmDeletePhotoComponent } from './components/confirm-delete-photo/confirm-delete-photo.component';
 const routes: Routes = [
   {
     path: '',
@@ -38,6 +38,7 @@ const routes: Routes = [
     path: 'AlbumUpdate',
     component: AlbumUpdateComponent
 }
+
 
 
 ];

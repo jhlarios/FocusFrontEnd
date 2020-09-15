@@ -1,0 +1,27 @@
+<a   href="Album/{{AlbumId}}"> << Regresar a album </a>
+<br>
+
+<h1 style="text-align: center;">Registrar photo </h1>
+<br>
+<mat-card>*Debido a que la base solicitado json para esta prueba no es persistente para las transacciones solo se muestra la respuesta que provee el servicio al registrar un objeto photo</mat-card>
+<br>
+
+<form style="text-align: center;"  [formGroup]="RegisterPhotoForm" (ngSubmit)="ngRegister()">
+    
+    <mat-form-field  class="">
+      <mat-label style="color: #c2185b;">Titulo</mat-label>   
+      <input style="border-bottom: 2px solid #c2185b;" matInput placeholder="Titulo" formControlName="title">    
+    </mat-form-field>
+    <br>
+    <mat-form-field  class="">
+        <mat-label style="color: #c2185b;">Url</mat-label>   
+        <input style="border-bottom: 2px solid #c2185b;" matInput placeholder="Url" formControlName="url">    
+      </mat-form-field>
+      <br>
+      <mat-form-field  class="">
+        <mat-label style="color: #c2185b;">ThumbnailUrl</mat-label>   
+        <input style="border-bottom: 2px solid #c2185b;" matInput placeholder="ThumbnailUrl" formControlName="thumbnailUrl">    
+      </mat-form-field>
+      <br>
+    <button style="margin-left: 10px;" mat-raised-button type="submit" color="primary">Registrar Photo</button>  
+  </form>

@@ -25,8 +25,7 @@ import { AlbumUpdateComponent } from './components/album-update/album-update.com
     AlbumsTableComponent,
     PhotosTableComponent,
     ConfirmDeletePhotoComponent,
-    PhotoregisterComponent,
-    AlbumUpdateComponent
+    PhotoregisterComponent
   ],
   imports: [
     BrowserModule,
