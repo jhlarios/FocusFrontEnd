@@ -29,7 +29,7 @@ const routes: Routes = [
 
 ,
   {
-    path: 'PhotoRegister',
+    path: 'PhotoRegister/:id',
     component: PhotoregisterComponent
 }
 

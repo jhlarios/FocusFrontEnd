@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl, FormArray, Validators } from '@angular/forms';
 import { RestService } from '../../../Services/rest.service';
 import { ActivatedRoute } from '@angular/router';
+import { Photo } from 'src/Models/Photo';
 
 @Component({
   selector: 'app-photoregister',
@@ -18,18 +19,38 @@ export class PhotoregisterComponent implements OnInit {
       thumbnailUrl: new FormControl(),
 });
 
-AlbumId:string=this.route.snapshot.queryParamMap.get('id');;
+AlbumId:string=this.route.snapshot.queryParamMap.get('id');
+Nuevo:Photo;
+PhotoSaved:Photo;
 
-// this.albumId = albumId;
-// this.id = id;      
-// this.title = title;
-// this.url = url;
-// this.thumbnailUrl = thumbnailUrl;
 
 ngRegister(): void {
+  this.route.paramMap.subscribe(params => {
+    this.AlbumId =params.get('id');
+    this.Nuevo= new Photo(Number(this.AlbumId),0,this.RegisterPhotoForm.get('title').value,this.RegisterPhotoForm.get('url').value,this.RegisterPhotoForm.get('thumbnailUrl').value );
+
+
+  this.rs.postPhotos(this.Nuevo).subscribe
+  (
+    (response)=>
+    {
+      this.PhotoSaved = response;
+    },
+    (error)=>
+    {
+      console.log("Error Occured : "+error);
+    }
+  )
+  
+  });
 }
 
   ngOnInit(): void {
+     this.route.paramMap.subscribe(params => {
+      this.AlbumId =params.get('id');
+    });
+
+    this.PhotoSaved = new Photo(null,null, null,null,null);
   }
 
 }

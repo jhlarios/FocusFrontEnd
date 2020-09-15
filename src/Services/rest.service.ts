@@ -41,7 +41,7 @@ export class RestService {
     return this.http.delete<ResultadoModel>(this.urlPhotos+ "?id="+ id);
   }
 
-  postPhotos(id:string, photo:Photo)
+  postPhotos(photo:Photo)
   {
     return this.http.post<Photo>(this.urlPhotos, photo);
   }

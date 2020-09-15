@@ -16,7 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { PhotoregisterComponent } from './components/photoregister/photoregister.component';
-import { AlbumUpdateComponent } from './components/album-update/album-update.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { AlbumUpdateComponent } from './components/album-update/album-update.com
     PhotosTableComponent,
     ConfirmDeletePhotoComponent,
     PhotoregisterComponent
+    
   ],
   imports: [
     BrowserModule,

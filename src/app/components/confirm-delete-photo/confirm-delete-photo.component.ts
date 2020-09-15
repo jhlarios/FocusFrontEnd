@@ -32,8 +32,8 @@ export class ConfirmDeletePhotoComponent implements OnInit {
      (response)=>
      {
        this.ResultadoModel = response;
-       console.log(response);
-       console.log(this.ResultadoModel);
+      //  console.log(response);
+      //  console.log(this.ResultadoModel);
        
      },
      (error)=>
