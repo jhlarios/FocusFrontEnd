@@ -17,19 +17,19 @@ const routes: Routes = [
 }
 ,
   {
-    path: 'Photos/:id',
+    path: 'Photos/:id/:id2',
     component: PhotosTableComponent
 }
 
 ,
   {
-    path: 'PhotosDelete/:id/:id2',
+    path: 'PhotosDelete/:id/:id2/:id3',
     component: ConfirmDeletePhotoComponent
 }
 
 ,
   {
-    path: 'PhotoRegister/:id',
+    path: 'PhotoRegister/:id/:id2',
     component: PhotoregisterComponent
 }
 

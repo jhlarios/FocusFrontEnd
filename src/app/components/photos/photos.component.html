@@ -1,8 +1,8 @@
-<a *ngFor="let photos of photos.slice(0, 1)"  href="Album/{{photos.albumId}}"> << Regresar a album </a>
+<a   href="Album/{{id2}}"> << Regresar a album </a>
 <br>
 
 <br>
-<a class="center" *ngFor="let photos of photos.slice(0, 1)"  href="PhotoRegister/{{photos.albumId}}"> <mat-icon aria-hidden="false" aria-label="Example icon" style="color: #c2185b;">note_add</mat-icon> Register Photo </a>
+<a class="center"   href="PhotoRegister/{{id}}/{{id2}}"> <mat-icon aria-hidden="false" aria-label="Example icon" style="color: #c2185b;">note_add</mat-icon> Registrar Fotos </a>
 <br>
 <h1 style="text-align: center;">Lista de fotos </h1>
 <div  >
@@ -23,7 +23,7 @@
     <td *ngFor="let col of index">
       {{photos[col]}}
     </td>
-    <td><a href="PhotosDelete/{{photos.id}}/{{photos.albumId}}"  >Delete</a></td>
+    <td><a href="PhotosDelete/{{photos.id}}/{{photos.albumId}}/{{id2}}"  >Delete</a></td>
   </tr>
 
 </table>

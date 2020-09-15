@@ -15,7 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 export class ConfirmDeletePhotoComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,private rs : RestService,private formBuilder:FormBuilder) { }
-  id:string;
+  Id:string;
+  Id3:string;
   AlbumId:string=this.route.snapshot.queryParamMap.get('id2');; 
   ResultadoModel:ResultadoModel;
 
@@ -23,10 +24,11 @@ export class ConfirmDeletePhotoComponent implements OnInit {
   Delete():void
   {
       this.route.paramMap.subscribe(params => {
-      this.id = params.get('id');
+      this.Id = params.get('id');
       this.AlbumId = params.get('id2');
+      this.Id3 = params.get('id3');
       console.log(this.AlbumId);
-      this.rs.deletePhotos(this.id).subscribe
+      this.rs.deletePhotos(this.Id).subscribe
       
    (
      (response)=>
@@ -49,6 +51,8 @@ export class ConfirmDeletePhotoComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.AlbumId =params.get('id2');
+      this.Id =params.get('id');
+      this.Id3 = params.get('id3');
     });
     
     this.ResultadoModel=new ResultadoModel ("");

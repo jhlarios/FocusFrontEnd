@@ -16,10 +16,12 @@ export class PhotosTableComponent implements OnInit {
   index = ["title"];
   photos : Photo[] = [];
   id:string; 
+  id2:string;
 
   ngOnInit(): void {
    this.route.paramMap.subscribe(params => {
        this.id = params.get('id');
+       this.id2 = params.get('id2');
        this.rs.getPhotos(this.id).subscribe
     (
       (response)=>

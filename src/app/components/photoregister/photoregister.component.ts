@@ -20,6 +20,7 @@ export class PhotoregisterComponent implements OnInit {
 });
 
 AlbumId:string=this.route.snapshot.queryParamMap.get('id');
+Id2:string=this.route.snapshot.queryParamMap.get('id2');
 Nuevo:Photo;
 PhotoSaved:Photo;
 
@@ -27,6 +28,7 @@ PhotoSaved:Photo;
 ngRegister(): void {
   this.route.paramMap.subscribe(params => {
     this.AlbumId =params.get('id');
+    this.Id2 =params.get('id2');
     this.Nuevo= new Photo(Number(this.AlbumId),0,this.RegisterPhotoForm.get('title').value,this.RegisterPhotoForm.get('url').value,this.RegisterPhotoForm.get('thumbnailUrl').value );
 
 
@@ -48,6 +50,7 @@ ngRegister(): void {
   ngOnInit(): void {
      this.route.paramMap.subscribe(params => {
       this.AlbumId =params.get('id');
+      this.Id2 =params.get('id2');
     });
 
     this.PhotoSaved = new Photo(null,null, null,null,null);
